@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201125180804) do
+ActiveRecord::Schema.define(version: 20201125222545) do
 
   create_table "magazines", force: :cascade do |t|
     t.string   "title"
@@ -25,11 +25,11 @@ ActiveRecord::Schema.define(version: 20201125180804) do
   end
 
   create_table "subscriptions", force: :cascade do |t|
-    t.integer  "month"
     t.integer  "subscriber_id"
     t.integer  "magazine_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "months"
   end
 
 end
